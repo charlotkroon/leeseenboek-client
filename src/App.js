@@ -7,7 +7,6 @@ import NavBar from "./components/NavBar/NavBar";
 function App() {
   return (
     <div>
-      <h1>HALLO</h1>
       <NavBar />
       <Route path="/signup" component={SignupFormContainer} />
       <Route path="/login" component={LoginFormContainer} />
