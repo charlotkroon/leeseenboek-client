@@ -1,6 +1,7 @@
 import request from "superagent";
 
 export const USER_LOGIN = "USER_LOGIN";
+export const USER_LOGOUT = "USER_LOGOUT";
 export const ALL_USERS = "ALL_USERS";
 export const NEW_USER = "NEW_USER";
 export const ERROR = "ERROR";
@@ -30,6 +31,13 @@ function userLogin(payload) {
 function error(payload) {
   return {
     type: ERROR,
+    payload
+  };
+}
+
+function userLogout(payload) {
+  return {
+    type: USER_LOGOUT,
     payload
   };
 }
@@ -64,21 +72,27 @@ export const createUser = data => dispatch => {
 };
 
 //LOGIN
-export const login = (email, password) => (dispatch, getState) => {
+export const login = (username, password) => (dispatch, getState) => {
   const state = getState();
   request
     .post(`${baseUrl}/login`)
     .set("Authorization", `Bearer ${state.loggedInUser.jwt}`)
-    .send({ email, password })
+    .send({ username, password })
     .then(response => {
-      const { jwt, email, id } = response.body;
+      const { jwt, username, id } = response.body;
 
-      const action = userLogin({ jwt, email, id });
+      const action = userLogin({ jwt, username, id });
       dispatch(action);
     })
     .catch(errorResponse => {
       console.error(errorResponse);
-      const action = error("Wrong password or email. Please try again.");
+      const action = error("Wrong password or username. Please try again.");
       dispatch(action);
     });
+};
+
+//LOG UIT
+export const logout = () => dispatch => {
+  const action = userLogout({});
+  dispatch(action);
 };
