@@ -1,15 +1,14 @@
 import React from "react";
-import React, { Component } from "react";
-import superagent from "superagent";
-import { connect } from "react-redux";
+import { Route } from "react-router-dom";
+import LoginFormContainer from "./components/Login/LoginFormContainer";
 
-class App extends Component {
-  async componentDidMount () {
-  
-  }
-
-  render() {
-    return()
-  }
+function App() {
+  return (
+    <div>
+      <h1>HALLO</h1>
+      <Route path="/login" component={LoginFormContainer} />
+    </div>
+  );
+}
 
 export default App;
