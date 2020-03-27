@@ -45,7 +45,7 @@ const LoginForm = props => {
   } else {
     return (
       <div>
-        <h2>Hey, welcome {props.loggedInUser.email}</h2>
+        <h2>Hey, welcome {props.loggedInUser.username}</h2>
 
         <Link to={"/"}>Take me back</Link>
       </div>

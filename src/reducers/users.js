@@ -1,4 +1,4 @@
-import { ALL_USERS, NEW_USER, ERROR } from "../actions/users";
+import { ALL_USERS, NEW_USER } from "../actions/users";
 
 export default function(state = [], action = {}) {
   switch (action.type) {
