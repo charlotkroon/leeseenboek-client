@@ -3,7 +3,6 @@ import request from "superagent";
 export const USER_LOGIN = "USER_LOGIN";
 export const USER_LOGOUT = "USER_LOGOUT";
 export const ALL_USERS = "ALL_USERS";
-export const NEW_USER = "NEW_USER";
 export const ERROR = "ERROR";
 
 const baseUrl = "http://localhost:4000";
@@ -11,12 +10,6 @@ const baseUrl = "http://localhost:4000";
 function allUsers(payload) {
   return {
     type: ALL_USERS,
-    payload
-  };
-}
-function newUser(payload) {
-  return {
-    type: NEW_USER,
     payload
   };
 }
@@ -55,20 +48,6 @@ export const getUsers = () => (dispatch, getState) => {
       })
       .catch(console.error);
   }
-};
-
-//CREATE NEW USER
-
-export const createUser = data => dispatch => {
-  request
-    .post(`${baseUrl}/users`)
-    .send(data)
-    .then(response => {
-      const user = response.body;
-      const action = newUser(user);
-      dispatch(action);
-    })
-    .catch(console.error);
 };
 
 //LOGIN
