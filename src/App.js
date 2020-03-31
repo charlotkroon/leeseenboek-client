@@ -3,13 +3,13 @@ import { Route } from "react-router-dom";
 import SignupFormContainer from "./components/Signup/SignupFormContainer";
 import LoginFormContainer from "./components/Login/LoginFormContainer";
 import NavBar from "./components/NavBar/NavBar";
-import Books from "./components/Books/Books";
+import BookSearch from "./components/Books/BookSearch";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Books />
+      <BookSearch />
       <Route path="/signup" component={SignupFormContainer} />
       <Route path="/login" component={LoginFormContainer} />
     </div>

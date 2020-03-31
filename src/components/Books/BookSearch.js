@@ -1,16 +1,25 @@
 import React from "react";
 import BookItem from "../BookItem/BookItem";
 
-export default class Books extends React.Component {
-  state = { fetching: true, books: [] };
+export default class BookSearch extends React.Component {
+  state = { fetching: true, books: [], search: "" };
 
   componentDidMount() {
-    fetch("https://www.googleapis.com/books/v1/volumes?q=quilting")
+    fetch("https://www.googleapis.com/books/v1/volumes?q=search+terms")
       .then(response => response.json())
       .then(book => {
         this.setState({ fetching: false, books: book.items });
       });
   }
+
+  handleSearch = () => {
+    this.setState({ ...this.state, fetching: true });
+    this.componentDidMount();
+  };
+
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   render() {
     // console.log("this state book?");
@@ -39,25 +48,3 @@ export default class Books extends React.Component {
     }
   }
 }
-
-//   componentDidMount() {
-//     fetch("https://www.googleapis.com/books/v1/volumes?q=quilting")
-//       .then(res => res.json())
-//       .then(book => {
-//         this.setState({ fetching: false, books: book.results });
-//       });
-//   }
-
-//   render() {
-//     if (!this.state.fetching) {
-//       return (
-//         <div>
-//           <h1>Books</h1>
-//
-
-//             </Book>)}
-//         </div>
-//       );
-//     }
-//   }
-// }
