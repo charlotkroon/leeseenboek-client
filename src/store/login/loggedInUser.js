@@ -1,4 +1,4 @@
-import { USER_LOGIN } from "../actions/users";
+import { USER_LOGIN } from "./action";
 
 export default function(state = [], action = {}) {
   switch (action.type) {

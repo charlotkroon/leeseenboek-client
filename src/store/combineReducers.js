@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import users from "./users";
+import users from "./login/users";
 import error from "./login/error";
-import loggedInUser from "./loggedInUser";
+import loggedInUser from "./login/loggedInUser";
 
 export default combineReducers({
   users,
