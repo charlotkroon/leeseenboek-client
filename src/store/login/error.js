@@ -1,4 +1,4 @@
-import { ERROR } from "../actions/users";
+import { ERROR } from "./action";
 
 export default function error(state = "", action = {}) {
   switch (action.type) {
