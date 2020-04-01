@@ -1,20 +1,22 @@
 import React from "react";
 import BookItem from "../BookItem/BookItem";
+import BookSearchForm from "./BookSearchForm";
 
 export default class BookSearch extends React.Component {
-  state = { fetching: true, books: [], search: "" };
+  state = { fetching: false, books: [], search: "" }; //fetching moet altijd op false in 't begin
 
-  componentDidMount() {
-    fetch("https://www.googleapis.com/books/v1/volumes?q=search+terms")
+  search(keyword) {
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${keyword}`)
       .then(response => response.json())
       .then(book => {
         this.setState({ fetching: false, books: book.items });
       });
   }
 
-  handleSearch = () => {
-    this.setState({ ...this.state, fetching: true });
-    this.componentDidMount();
+  handleSearch = keyword => {
+    // roep zoek functie aan door child component booksearchForm
+    this.setState({ ...this.state, fetching: true }); //dit is om eventueel een mooie loading indicator te tonen
+    this.search(keyword); //roep de zoekfuntie aan!
   };
 
   handleChange = event => {
@@ -36,22 +38,7 @@ export default class BookSearch extends React.Component {
       console.log("AFTER FETCHINGG?!?", this.state.books.length);
       return (
         <div>
-          <h1>Books!</h1>
-          <div>
-            <form onSubmit={this.handleSearch}>
-              <label>
-                <input
-                  type="text"
-                  name="search"
-                  placeholder="Search for your book here.."
-                  onChange={this.handleChange}
-                  value={this.state.search}
-                />
-              </label>
-              <input type="submit" value="Search" />
-            </form>
-          </div>
-
+          <BookSearchForm handleSearch={this.handleSearch} />
           {this.state.books.length > 0 && (
             <div>
               {this.state.books.map(book => {
