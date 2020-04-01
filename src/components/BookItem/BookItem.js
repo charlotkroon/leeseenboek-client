@@ -2,6 +2,12 @@ import React, { Component } from "react";
 
 export class BookItem extends Component {
   render() {
+    console.log("What is the book prop??", this.props.book);
+    console.log("Tell me about the imageLinks", this.props.book.imageLinks);
+    console.log(
+      "Tell me about the imageLinks.thumbnail",
+      this.props.book.imageLinks.thumbnail
+    );
     return (
       <div>
         <div>
