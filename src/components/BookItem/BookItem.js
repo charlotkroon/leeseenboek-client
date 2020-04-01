@@ -3,15 +3,28 @@ import React, { Component } from "react";
 export class BookItem extends Component {
   render() {
     console.log("What is the book prop??", this.props.book);
-    console.log("Tell me about the imageLinks", this.props.book.imageLinks);
+
+    // console.log(
+    //   "Tell me about the imageLinks.thumbnail",
+    //   this.props.book.imageLinks.thumbnail
+    // );
+    if (!this.props.book) {
+      return "wacht op book";
+    }
+    if (!this.props.book.imageLinks) {
+      return "wacht op imagelinks";
+    }
+    if (!this.props.book.imageLinks.smallThumbnail) {
+      return "wacht op imagelinksthumbnail";
+    }
     console.log(
-      "Tell me about the imageLinks.thumbnail",
-      this.props.book.imageLinks.thumbnail
+      "Tell me about the small thumbnail imageLinks",
+      this.props.book.imageLinks.smallThumbnail
     );
     return (
       <div>
         <div>
-          <img src={this.props.book.imageLinks.smallThumbnail} />
+          "<img src={this.props.book.imageLinks.smallThumbnail} />"
         </div>
         <div>
           {this.props.book.title && (

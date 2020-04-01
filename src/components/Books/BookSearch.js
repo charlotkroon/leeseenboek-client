@@ -24,6 +24,11 @@ export default class BookSearch extends React.Component {
   render() {
     // console.log("this state book?");
     // console.log(this.props);
+    console.log("what is my state", this.state);
+
+    if (!this.state.books) {
+      return "wacht op book booksearch regel 29";
+    }
     console.log("state variable");
     console.log(this.state);
     console.log("STATE BOOKS LENGTH?!?", this.state.books.length);
@@ -33,9 +38,10 @@ export default class BookSearch extends React.Component {
         <div>
           {this.state.books.length > 0 && (
             <div>
-              {this.state.books.map(book => (
-                <BookItem key={book.id} book={book.volumeInfo} />
-              ))}
+              {this.state.books.map(book => {
+                console.log("what is booook jeroen?", book);
+                return <BookItem key={book.id} book={book.volumeInfo} />;
+              })}
             </div>
           )}
         </div>
