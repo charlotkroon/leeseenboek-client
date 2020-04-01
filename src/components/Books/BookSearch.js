@@ -26,24 +26,11 @@ export default class BookSearch extends React.Component {
     // console.log(this.props);
     console.log("state variable");
     console.log(this.state);
+    console.log("STATE BOOKS LENGTH?!?", this.state.books.length);
     if (!this.state.fetching) {
+      console.log("AFTER FETCHINGG?!?", this.state.books.length);
       return (
         <div>
-          <h1>Books!</h1>
-          <div>
-            <form onSubmit={this.handleSearch}>
-              <label>
-                <input
-                  type="text"
-                  name="search"
-                  placeholder="Search for your book here.."
-                  onChange={this.handleChange}
-                  value={this.state.search}
-                />
-              </label>
-              <input type="submit" value="Search" />
-            </form>
-          </div>
           {this.state.books.length > 0 && (
             <div>
               {this.state.books.map(book => (

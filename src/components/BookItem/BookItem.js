@@ -11,7 +11,7 @@ export class BookItem extends Component {
     return (
       <div>
         <div>
-          <img src={this.props.book.imageLinks.thumbnail} />
+          <img src={this.props.book.imageLinks.smallThumbnail} />
         </div>
         <div>
           {this.props.book.title && (
