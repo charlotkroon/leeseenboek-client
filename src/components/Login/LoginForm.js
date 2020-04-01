@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import "../styling/loginForm.css";
 
 const LoginForm = props => {
   if (props.loggedInUser.length === 0) {
     return (
-      <div>
+      <div className="headLogin">
         <form onSubmit={props.onSubmit}>
           <label>
             Username:

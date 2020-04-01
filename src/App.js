@@ -4,14 +4,17 @@ import SignupFormContainer from "./components/Signup/SignupFormContainer";
 import LoginFormContainer from "./components/Login/LoginFormContainer";
 import NavBar from "./components/NavBar/NavBar";
 import BookSearch from "./components/Books/BookSearch";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <BookSearch />
-      <Route path="/signup" component={SignupFormContainer} />
-      <Route path="/login" component={LoginFormContainer} />
+    <div className="wholePage">
+      <div>
+        <NavBar />
+        <BookSearch />
+        <Route path="/signup" component={SignupFormContainer} />
+        <Route path="/login" component={LoginFormContainer} />
+      </div>
     </div>
   );
 }
