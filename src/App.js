@@ -2,13 +2,15 @@ import React from "react";
 import { Route } from "react-router-dom";
 import SignupFormContainer from "./components/Signup/SignupFormContainer";
 import LoginFormContainer from "./components/Login/LoginFormContainer";
-import NavBar from "./components/NavBar/NavBar";
+import AppLayout from "./components/Layouts/AppLayout";
 import BookSearch from "./components/Books/BookSearch";
+
+import "typeface-roboto";
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <AppLayout />
       <BookSearch />
       <Route path="/signup" component={SignupFormContainer} />
       <Route path="/login" component={LoginFormContainer} />
