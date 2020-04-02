@@ -10,36 +10,39 @@ const LoginForm = props => {
     return (
       <Grid container>
         <form onSubmit={props.onSubmit}>
-          <Grid item>
+          <Grid item sm>
             <Typography variant="h3">Login</Typography>
-            Username:
+
             <TextField
               required
               id="standard-basic"
               label="username"
               name="username"
+              justify="center"
               placeholder="Username"
               value={props.values.username}
               onChange={props.onChange}
             />
           </Grid>
-          <Grid item>
+          <Grid item sm>
             <TextField
               required
               id="standard-basic"
               label="email"
               name="email"
+              justify="center"
               placeholder="E-mail"
               value={props.values.email}
               onChange={props.onChange}
             />
           </Grid>
-          <Grid item>
+          <Grid item sm>
             <TextField
               required
               id="standard-basic"
               label="password"
               name="password"
+              justify="center"
               placeholder="Password"
               value={props.values.password}
               onChange={props.onChange}
