@@ -5,12 +5,12 @@ import LoginFormContainer from "./components/Login/LoginFormContainer";
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
 import BookSearch from "./components/Books/BookSearch";
-import "./App.css";
+import Homepage from "./components/Home/HomePage";
 
 function App() {
   return (
     <div>
-      <Header />
+      <Route exact path="/" component={Homepage} />
       <Route path="/signup" component={SignupFormContainer} />
       <Route path="/login" component={LoginFormContainer} />
       <BookSearch />
