@@ -5,6 +5,7 @@ import LoginFormContainer from "./components/Login/LoginFormContainer";
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
 import BookSearch from "./components/Books/BookSearch";
+import "./App.css";
 
 function App() {
   return (
