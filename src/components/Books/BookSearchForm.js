@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/login/action";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 //step 1 import useState from react so i can use it
 
+const style = {
+  Paper: { padding: 50, marginTop: 25, marginBottom: 25 }
+};
 export default function BookSearchForm(props) {
-  const dispatch = useDispatch();
-  //lets do weird dispatch stuff
+  // const dispatch = useDispatch();
 
   const [keyword, set_keyword] = useState(""); //my first hook!
-  //hooks zijn een soort van arrayding, waar het eerste item een let is die een waarde vasthoudtsearch
-  //het twee item is een functie die wanneer ik die aanroep set_keyword("vaaaaaag") de waarde van het eerste
-  //item veranderd in "vaaaag"
-  //useState("");  // alles tussen de haakjes is beginwaarde "text" , [] , {}, {name: "Jeroen", age: 31}
-  //Hooks are awesome!
+
   return (
-    <div>
-      <div>
-        <h1>Books!</h1>
+    <Grid container justify="center">
+      <Paper style={style.Paper}>
+        <Typography variant="h3" align="center">
+          Books
+        </Typography>
         <div>
           <form onSubmit={e => props.handleSearch(keyword)}>
             <label>
@@ -29,13 +32,9 @@ export default function BookSearchForm(props) {
               />
             </label>
             <input type="submit" value="Search" />
-            <button onClick={dispatch({ type: "LOGIN", payload: "Jeroen" })}>
-              gelijk naar reducer
-            </button>
-            <button onClick={dispatch(login(keyword))}>click me</button>
           </form>
         </div>
-      </div>
-    </div>
+      </Paper>
+    </Grid>
   );
 }
