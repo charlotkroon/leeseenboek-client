@@ -6,15 +6,18 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 
+const style = {
+  Paper: { padding: 20, marginTop: 10, marginBottom: 10 }
+};
+
 const LoginForm = props => {
   if (props.loggedInUser.length === 0) {
     return (
       <Grid container>
-        <form onSubmit={props.onSubmit}>
-          <Grid item sm>
-            <Paper>
+        <Paper style={style.Paper}>
+          <form onSubmit={props.onSubmit}>
+            <Grid item sm>
               <Typography variant="h3">Login</Typography>
-
               <TextField
                 required
                 id="standard-basic"
@@ -25,10 +28,8 @@ const LoginForm = props => {
                 value={props.values.username}
                 onChange={props.onChange}
               />
-            </Paper>
-          </Grid>
-          <Grid item sm>
-            <Paper>
+            </Grid>
+            <Grid item sm>
               <TextField
                 required
                 id="standard-basic"
@@ -39,10 +40,8 @@ const LoginForm = props => {
                 value={props.values.email}
                 onChange={props.onChange}
               />
-            </Paper>
-          </Grid>
-          <Grid item sm>
-            <Paper>
+            </Grid>
+            <Grid item sm>
               <TextField
                 required
                 id="standard-basic"
@@ -53,11 +52,11 @@ const LoginForm = props => {
                 value={props.values.password}
                 onChange={props.onChange}
               />
-            </Paper>
-          </Grid>
-          <input type="submit" value="Login" />
-        </form>
-        {props.error.length > 0 && <p>{props.error}</p>}
+            </Grid>
+            <input type="submit" value="Login" />
+          </form>
+          {props.error.length > 0 && <p>{props.error}</p>}
+        </Paper>
       </Grid>
     );
   } else {
