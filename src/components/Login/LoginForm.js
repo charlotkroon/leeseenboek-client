@@ -11,6 +11,7 @@ const style = {
   Paper: { padding: 20, marginTop: 10, marginBottom: 10 }
 };
 
+
 const LoginForm = props => {
   if (props.loggedInUser.length === 0) {
     return (

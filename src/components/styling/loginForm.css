@@ -1,0 +1,11 @@
+.headLogin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  width: 50%;
+  height: 200px;
+  flex-direction: column;
+  background-color: pink;
+  text-align: center;
+}
