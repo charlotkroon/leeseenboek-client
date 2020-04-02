@@ -5,8 +5,6 @@ import LoginFormContainer from "./components/Login/LoginFormContainer";
 import AppLayout from "./components/Layouts/AppLayout";
 import BookSearch from "./components/Books/BookSearch";
 
-import "typeface-roboto";
-
 function App() {
   return (
     <div>
