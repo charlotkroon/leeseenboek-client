@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
+import Paper from "@material-ui/core/Paper";
 
 const LoginForm = props => {
   if (props.loggedInUser.length === 0) {
@@ -11,42 +12,48 @@ const LoginForm = props => {
       <Grid container>
         <form onSubmit={props.onSubmit}>
           <Grid item sm>
-            <Typography variant="h3">Login</Typography>
+            <Paper>
+              <Typography variant="h3">Login</Typography>
 
-            <TextField
-              required
-              id="standard-basic"
-              label="username"
-              name="username"
-              justify="center"
-              placeholder="Username"
-              value={props.values.username}
-              onChange={props.onChange}
-            />
+              <TextField
+                required
+                id="standard-basic"
+                label="username"
+                name="username"
+                justify="center"
+                placeholder="Username"
+                value={props.values.username}
+                onChange={props.onChange}
+              />
+            </Paper>
           </Grid>
           <Grid item sm>
-            <TextField
-              required
-              id="standard-basic"
-              label="email"
-              name="email"
-              justify="center"
-              placeholder="E-mail"
-              value={props.values.email}
-              onChange={props.onChange}
-            />
+            <Paper>
+              <TextField
+                required
+                id="standard-basic"
+                label="email"
+                name="email"
+                justify="center"
+                placeholder="E-mail"
+                value={props.values.email}
+                onChange={props.onChange}
+              />
+            </Paper>
           </Grid>
           <Grid item sm>
-            <TextField
-              required
-              id="standard-basic"
-              label="password"
-              name="password"
-              justify="center"
-              placeholder="Password"
-              value={props.values.password}
-              onChange={props.onChange}
-            />
+            <Paper>
+              <TextField
+                required
+                id="standard-basic"
+                label="password"
+                name="password"
+                justify="center"
+                placeholder="Password"
+                value={props.values.password}
+                onChange={props.onChange}
+              />
+            </Paper>
           </Grid>
           <input type="submit" value="Login" />
         </form>
