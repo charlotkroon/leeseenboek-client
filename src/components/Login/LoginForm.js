@@ -11,7 +11,6 @@ const style = {
   Paper: { padding: 20, marginTop: 10, marginBottom: 10 }
 };
 
-
 const LoginForm = props => {
   if (props.loggedInUser.length === 0) {
     return (
@@ -55,7 +54,7 @@ const LoginForm = props => {
                 onChange={props.onChange}
               />
             </Grid>
-            <Grid Item justify="center">
+            <Grid Item justify="centered">
               <Button variant="contained" color="primary" type="submit">
                 Login
               </Button>
