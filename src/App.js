@@ -2,19 +2,19 @@ import React from "react";
 import { Route } from "react-router-dom";
 import SignupFormContainer from "./components/Signup/SignupFormContainer";
 import LoginFormContainer from "./components/Login/LoginFormContainer";
-import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Layouts/Header";
+import Footer from "./components/Layouts/Footer";
 import BookSearch from "./components/Books/BookSearch";
 import "./App.css";
 
 function App() {
   return (
-    <div className="wholePage">
-      <div>
-        <NavBar />
-        <BookSearch />
-        <Route path="/signup" component={SignupFormContainer} />
-        <Route path="/login" component={LoginFormContainer} />
-      </div>
+    <div>
+      <Header />
+      <Route path="/signup" component={SignupFormContainer} />
+      <Route path="/login" component={LoginFormContainer} />
+      <BookSearch />
+      <Footer />
     </div>
   );
 }
