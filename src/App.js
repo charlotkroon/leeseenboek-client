@@ -5,15 +5,19 @@ import LoginFormContainer from "./components/Login/LoginFormContainer";
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
 import BookSearch from "./components/Books/BookSearch";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Route path="/signup" component={SignupFormContainer} />
-      <Route path="/login" component={LoginFormContainer} />
-      <BookSearch />
-      <Footer />
+      <React.Fragment>
+        <CssBaseline />
+        <Header />
+        <Route path="/signup" component={SignupFormContainer} />
+        <Route path="/login" component={LoginFormContainer} />
+        <BookSearch />
+        <Footer />
+      </React.Fragment>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 
 const style = {
   Paper: { padding: 20, marginTop: 10, marginBottom: 10 }
@@ -13,7 +14,7 @@ const style = {
 const LoginForm = props => {
   if (props.loggedInUser.length === 0) {
     return (
-      <Grid container>
+      <Grid container justify="center">
         <Paper style={style.Paper}>
           <form onSubmit={props.onSubmit}>
             <Grid item sm>
@@ -53,7 +54,11 @@ const LoginForm = props => {
                 onChange={props.onChange}
               />
             </Grid>
-            <input type="submit" value="Login" />
+            <Grid Item justify="center">
+              <Button variant="contained" color="primary" type="submit">
+                Login
+              </Button>
+            </Grid>
           </form>
           {props.error.length > 0 && <p>{props.error}</p>}
         </Paper>
