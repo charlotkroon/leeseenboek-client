@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 //step 1 import useState from react so i can use it
 
 const style = {
@@ -51,7 +52,9 @@ export default function BookSearchForm(props) {
               value={keyword}
             />
           </Grid>
-          <input type="submit" value="Search" />
+          <Button variant="contained" color="primary" type="submit">
+            search
+          </Button>
         </form>
       </Paper>
     </Grid>
