@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../store/login/action";
+// import { useDispatch, useSelector } from "react-redux";
+// import { login } from "../../store/login/action";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
@@ -20,9 +20,8 @@ export default function BookSearchForm(props) {
         <Typography variant="h3" align="center">
           Books
         </Typography>
-        <div>
           <form onSubmit={e => props.handleSearch(keyword)}>
-            <label>
+          <Grid item>
               <input
                 type="text"
                 name="search"
@@ -30,10 +29,9 @@ export default function BookSearchForm(props) {
                 onChange={e => set_keyword(e.target.value)}
                 value={keyword}
               />
-            </label>
+            </Grid>
             <input type="submit" value="Search" />
           </form>
-        </div>
       </Paper>
     </Grid>
   );

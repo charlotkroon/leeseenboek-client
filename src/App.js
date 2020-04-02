@@ -5,11 +5,9 @@ import LoginFormContainer from "./components/Login/LoginFormContainer";
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
 import BookSearch from "./components/Books/BookSearch";
-<<<<<<< HEAD
+
 import CssBaseline from "@material-ui/core/CssBaseline";
-=======
-import "./App.css";
->>>>>>> 1c33d7b55cc875f3d77aa65b8c043c924745dd3a
+
 
 function App() {
   return (
