@@ -28,12 +28,15 @@ export default function Header() {
         <Typography variant="h6" className={classes.title}>
           LEES EEN BOEK
         </Typography>
-        <Link to="/login">
-          <Button color="inherit">Login</Button>
-        </Link>
-        <Link to="/signup">
-          <Button color="inherit">Sign Up</Button>
-        </Link>
+        <Button color="inherit" component={Link} raised to="/">
+          Home
+        </Button>
+        <Button color="inherit" component={Link} raised to="/login">
+          Login
+        </Button>
+        <Button color="inherit" component={Link} raised to="/signup">
+          Sign Up
+        </Button>
       </Toolbar>
     </AppBar>
   );

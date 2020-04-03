@@ -11,8 +11,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 
 export class BookItem extends Component {
   render() {
-    console.log("What is the book prop??", this.props.book);
-
     if (!this.props.book) {
       return "wacht op book";
     }
@@ -22,10 +20,6 @@ export class BookItem extends Component {
     if (!this.props.book.imageLinks.smallThumbnail) {
       return "wacht op imagelinksthumbnail";
     }
-    console.log(
-      "Tell me about the small thumbnail imageLinks",
-      this.props.book.imageLinks.smallThumbnail
-    );
 
     return (
       <Grid container justify="center">
@@ -49,11 +43,6 @@ export class BookItem extends Component {
               <Typography variant="body2" color="textSecondary" component="p">
                 Description: {this.props.book.description}
               </Typography>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-              ></Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 Categories: {this.props.book.categories}
               </Typography>
