@@ -55,6 +55,15 @@ export default function Header() {
         >
           Sign Up
         </Button>
+        <Button
+          color="inherit"
+          color="secondary"
+          component={Link}
+          raised
+          to="/about"
+        >
+          About
+        </Button>
       </Toolbar>
     </AppBar>
   );
