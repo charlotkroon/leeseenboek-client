@@ -4,21 +4,22 @@ import { login } from "../../store/login/action";
 import LoginForm from "./LoginForm";
 
 class LoginFormContainer extends Component {
-  state = { username: "", password: "" };
+  state = { username: "", email: "", password: "" };
 
-  onChange = event => {
+  onChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
-  onSubmit = event => {
+  onSubmit = (event) => {
     event.preventDefault();
 
     this.props.login(this.state.username, this.state.password);
 
     this.setState({
       username: "",
-      password: ""
+      email: "",
+      password: "",
     });
   };
 
