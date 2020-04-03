@@ -1,13 +1,18 @@
 import React, { Component } from "react";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardHeader from "@material-ui/core/CardHeader";
 
 export class BookItem extends Component {
   render() {
     console.log("What is the book prop??", this.props.book);
 
-    // console.log(
-    //   "Tell me about the imageLinks.thumbnail",
-    //   this.props.book.imageLinks.thumbnail
-    // );
     if (!this.props.book) {
       return "wacht op book";
     }
@@ -21,50 +26,41 @@ export class BookItem extends Component {
       "Tell me about the small thumbnail imageLinks",
       this.props.book.imageLinks.smallThumbnail
     );
+
     return (
-      <div>
-        <div>
-          "<img src={this.props.book.imageLinks.smallThumbnail} />"
-        </div>
-        <div>
-          {this.props.book.title && (
-            <div>
-              <h3>Book Title: </h3> {this.props.book.title}
-            </div>
-          )}
-          {this.props.book.authors && (
-            <div>
-              <h3>Author: </h3>
-              {this.props.book.authors[0]}
-            </div>
-          )}
-          {this.props.book.publisher && (
-            <div>
-              <h3>Publisher: </h3> {this.props.book.publisher}
-            </div>
-          )}
-          {this.props.book.publishedDate && (
-            <div>
-              <h3>Originally Published: </h3> {this.props.book.publishedDate}
-            </div>
-          )}
-          {this.props.book.description && (
-            <div>
-              <h3>Description: </h3> {this.props.book.description}
-            </div>
-          )}
-          {this.props.book.pageCount && (
-            <div>
-              <h3>Number of Pages: </h3> {this.props.book.pageCount}
-            </div>
-          )}
-          {this.props.book.categories && (
-            <div>
-              <h3>Categories</h3>: {this.props.book.categories[0]}
-            </div>
-          )}
-        </div>
-      </div>
+      <Grid container justify="center">
+        <Typography variant="h5" align="center">
+          Result{" "}
+        </Typography>
+        <Grid item xs={12} justify="center">
+          <Card>
+            <CardHeader title={this.props.book.title} />
+            <CardMedia>
+              <img src={this.props.book.imageLinks.smallThumbnail} />
+            </CardMedia>
+            <CardContent justify="center">
+              <Typography variant="body2" color="textSecondary" component="p">
+                {" "}
+                Author: {this.props.book.authors}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Publisher: {this.props.book.publisher}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Description: {this.props.book.description}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                component="p"
+              ></Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Categories: {this.props.book.categories}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     );
   }
 }
