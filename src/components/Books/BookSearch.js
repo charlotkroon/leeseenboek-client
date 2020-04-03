@@ -43,7 +43,7 @@ export default class BookSearch extends React.Component {
             <div>
               {this.state.books.map(book => {
                 console.log("what is booook jeroen?", book);
-                return <BookItem key={book.id} book={book.volumeInfo} />;
+                return <BookItem key={book.id} book={book.volumeInfo} />; //this is where i display it
               })}
             </div>
           )}

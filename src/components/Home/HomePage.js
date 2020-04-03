@@ -1,10 +1,11 @@
 import React from "react";
-import Header from "../Layouts/Header";
+
+import BookSearch from "../Books/BookSearch";
 
 export default function Homepage() {
   return (
     <div>
-      <Header />
+      <BookSearch />
     </div>
   );
 }
