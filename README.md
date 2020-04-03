@@ -43,7 +43,8 @@ I created the Instagram account LEES EEN BOEK (@leeseenboek) in 2017 and while m
 - As a user I want to find book quotes of a specific book.
 
 ### Wireframe
-
+![_Signup](https://user-images.githubusercontent.com/57155814/78368192-86de2780-75c3-11ea-9335-9a753f9a42f7.png)
+![Homepage](https://user-images.githubusercontent.com/57155814/78368159-7a59cf00-75c3-11ea-9232-bd0cca15d1c1.png)
 ![Book-page](https://user-images.githubusercontent.com/57155814/78368047-50081180-75c3-11ea-9430-a0c49ac8adfc.png)
 
 
