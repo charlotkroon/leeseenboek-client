@@ -6,20 +6,14 @@ LEES EEN BOEK is an online community created to inspire people to read more book
 
 I created the Instagram account LEES EEN BOEK (@leeseenboek) in 2017 and while my followers count grew, it became clear to me that people have been wanting to bond over books on the internet for a long time. Websites were people can share and discuss what they're reading/want to read do exist, but are often outdated or broken.
 
-## Table of contents
-
-xxx
-
-## Features ✨
-
 ## Install
 
 1. Clone this repo
 2. cd into ...a
 3. run npm install
-4. take a cup of coffee and wait
+4. Take a cup of coffee and wait
 5. npm run start
-6. setup server (www. link to server repo)
+6. setup server (https://github.com/charliegabriella/leeseenboek-server)
 
 ## Built with
 
@@ -40,22 +34,13 @@ xxx
 
 ### User stories for this project:
 
-(Who) As a person who loves reading books and want to get book recommendations from others
-(What) I want a homepage
-(What) I want to be able to sign up and create an account. I want to be able to login
-(Why) Because finding out what you want to read can be hard
-
-(Who) As a person who likes sharing what they read
-(What) Ability to post the book they are currently reading
-(What) I want to be able to add friends
-
-(Who) As a person who wants to have discussions about a specific book and give reviews
-(What) A special page for a specific book
-(What) A way to search or discover books
-(Why) So I can read cool books
-
-(Who) As a person who enjoys reading and finding quotes from books
-(What) I want to be able to go to a page with book quotes
+- As a user who loves reading books I want to be able to sign up and create an account. :heavy_check_mark:
+- As a user I want to be able to search and discover new books in a big database. :heavy_check_mark:
+- As a user I want to have my own profile page.
+- As a user I want to have the ability to post the book I am currently reading.
+- Aas a user I want to be able to add friends.
+- As a user I want to have discussions about a specific book and give reviews.
+- As a user I want to find book quotes of a specific book.
 
 ### Wireframe
 

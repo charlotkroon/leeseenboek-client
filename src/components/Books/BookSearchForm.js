@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     "& > *": {
       margin: theme.spacing(1),
-      width: "25ch"
+      width: "200ch"
     }
   }
 }));
@@ -39,15 +39,14 @@ export default function BookSearchForm(props) {
           className={classes.root}
           onSubmit={e => props.handleSearch(keyword)}
         >
-          <Grid item>
+          <Grid item className={classes.root}>
             <TextField
               required
               id="outlined-basic"
-              label="Outlined"
               variant="outlined"
               type="text"
               name="search"
-              placeholder="Search for your book here.."
+              placeholder="Search..."
               onChange={e => set_keyword(e.target.value)}
               value={keyword}
             />

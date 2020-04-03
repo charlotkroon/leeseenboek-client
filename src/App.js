@@ -5,6 +5,7 @@ import SignupFormContainer from "./components/Signup/SignupFormContainer";
 import LoginFormContainer from "./components/Login/LoginFormContainer";
 import Footer from "./components/Layouts/Footer";
 import Homepage from "./components/Home/HomePage";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Route exact path="/" component={Homepage} />
       <Route path="/signup" component={SignupFormContainer} />
       <Route path="/login" component={LoginFormContainer} />
-
+      <Route path="/about" component={About} />
       <Footer />
     </div>
   );
