@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345
   },
+  flex: { flex: 1 },
   details: {
     display: "flex",
     flexDirection: "column"
@@ -50,17 +51,17 @@ export function BookItem(props) {
             image={props.book.imageLinks.smallThumbnail}
           />
 
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="secondary" component="p">
             {" "}
             Author: {props.book.authors}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="secondary" component="p">
             Publisher: {props.book.publisher}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="secondary" component="p">
             Description: {props.book.description}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="secondary" component="p">
             Categories: {props.book.categories}
           </Typography>
         </CardContent>

@@ -1,28 +1,23 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 
-export default function DisabledTabs() {
-  const [value, setValue] = React.useState(2);
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+export default function Footer() {
   return (
-    <Paper square>
-      <Tabs
-        value={value}
-        indicatorColor="primary"
-        textColor="primary"
-        justify="center"
-        onChange={handleChange}
+    <div>
+      <Typography
+        color="secondary light"
+        style={{ flex: 1, fontSize: 10, fontWeight: "bold" }}
+        align="center"
       >
-        <Tab label="Active" />
-        <Tab label="Disabled" />
-        <Tab label="Active" />
-      </Tabs>
-    </Paper>
+        Made with
+        <IconButton color="secondary">
+          <FavoriteIcon />
+        </IconButton>
+        by Charlie
+      </Typography>
+    </div>
   );
 }

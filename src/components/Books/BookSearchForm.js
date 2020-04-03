@@ -43,11 +43,10 @@ export default function BookSearchForm(props) {
             <TextField
               required
               id="outlined-basic"
-              label="Outlined"
               variant="outlined"
               type="text"
               name="search"
-              placeholder="Search for your book here.."
+              placeholder="Search..."
               onChange={e => set_keyword(e.target.value)}
               value={keyword}
             />
