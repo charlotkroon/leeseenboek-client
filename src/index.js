@@ -4,11 +4,18 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import store from "../src/store/store";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import pink from "@material-ui/core/colors/pink";
+
 import { Provider } from "react-redux";
 
 const theme = createMuiTheme({
-  palette: { primary: pink }
+  palette: {
+    primary: {
+      main: "#f8bbd0"
+    },
+    secondary: {
+      main: "#ff80ab"
+    }
+  }
 });
 
 console.log("theme??", theme);
