@@ -44,7 +44,8 @@ I created the Instagram account LEES EEN BOEK (@leeseenboek) in 2017 and while m
 
 ### Wireframe
 
-xxx
+![Book-page](https://user-images.githubusercontent.com/57155814/78368047-50081180-75c3-11ea-9430-a0c49ac8adfc.png)
+
 
 ## Git workflow
 
