@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
@@ -9,50 +10,51 @@ import Button from "@material-ui/core/Button";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardHeader from "@material-ui/core/CardHeader";
 
-export class BookItem extends Component {
-  render() {
-    if (!this.props.book) {
-      return "wacht op book";
-    }
-    if (!this.props.book.imageLinks) {
-      return "wacht op imagelinks";
-    }
-    if (!this.props.book.imageLinks.smallThumbnail) {
-      return "wacht op imagelinksthumbnail";
-    }
-
-    return (
-      <Grid container justify="center">
-        <Grid item xs={12}>
-          <Typography variant="h5" align="center">
-            Result{" "}
-          </Typography>
-        </Grid>
-        <Grid Item>
-          <Card>
-            <CardContent justify="center">
-              <CardHeader title={this.props.book.title} />
-              <CardMedia image={this.props.book.imageLinks.smallThumbnail} />
-
-              <Typography variant="body2" color="textSecondary" component="p">
-                {" "}
-                Author: {this.props.book.authors}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Publisher: {this.props.book.publisher}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Description: {this.props.book.description}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Categories: {this.props.book.categories}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
-    );
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345
   }
+});
+
+export function BookItem(props) {
+  const classes = useStyles();
+  if (!props.book) {
+    return "wacht op book";
+  }
+  if (!props.book.imageLinks) {
+    return "wacht op imagelinks";
+  }
+  if (!props.book.imageLinks.smallThumbnail) {
+    return "wacht op imagelinksthumbnail";
+  }
+
+  console.log("wat is imagethumbnail", props.book.imageLinks.smallThumbnail);
+
+  return (
+    <Card className={classes.root}>
+      <CardContent justify="center">
+        <CardHeader title={props.book.title} />
+
+        <img src={props.book.imageLinks.smallThumbnail} alt="hallo"></img>
+
+        <Typography variant="body2" color="textSecondary" component="p">
+          {" "}
+          Author: {props.book.authors}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Publisher: {props.book.publisher}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Description: {props.book.description}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Categories: {props.book.categories}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
 }
 
 export default BookItem;
+
+// <CardMedia src={this.props.book.imageLinks.smallThumbnail} />
