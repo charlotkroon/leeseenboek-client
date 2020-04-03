@@ -23,16 +23,17 @@ export class BookItem extends Component {
 
     return (
       <Grid container justify="center">
-        <Typography variant="h5" align="center">
-          Result{" "}
-        </Typography>
-        <Grid item xs={12} justify="center">
+        <Grid item xs={12}>
+          <Typography variant="h5" align="center">
+            Result{" "}
+          </Typography>
+        </Grid>
+        <Grid Item>
           <Card>
-            <CardHeader title={this.props.book.title} />
-            <CardMedia>
-              <img src={this.props.book.imageLinks.smallThumbnail} />
-            </CardMedia>
             <CardContent justify="center">
+              <CardHeader title={this.props.book.title} />
+              <CardMedia image={this.props.book.imageLinks.smallThumbnail} />
+
               <Typography variant="body2" color="textSecondary" component="p">
                 {" "}
                 Author: {this.props.book.authors}
