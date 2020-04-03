@@ -56,7 +56,7 @@ With this project I practiced:
 - Creating and using wellnamed branches
 - Writing pull requests with clear summaries
 
-#### Samples of pull requests
+#### Samples of pull requests:mag_right:
 
 - [Theming and Styling with Material UI](https://github.com/charliegabriella/leeseenboek-client/pull/18)
 
