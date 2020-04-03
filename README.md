@@ -58,7 +58,7 @@ With this project I practiced:
 
 #### Samples of pull requests
 
-xxxx
+- [Theming and Styling with Material UI](https://github.com/charliegabriella/leeseenboek-client/pull/18)
 
 ## Server-repo
 
