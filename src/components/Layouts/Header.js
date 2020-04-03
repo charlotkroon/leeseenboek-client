@@ -25,16 +25,34 @@ export default function Header() {
     <AppBar position="static">
       <Toolbar>
         {" "}
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" color="secondary" className={classes.title}>
           LEES EEN BOEK
         </Typography>
-        <Button color="inherit" component={Link} raised to="/">
+        <Button
+          color="inherit"
+          color="secondary"
+          component={Link}
+          raised
+          to="/"
+        >
           Home
         </Button>
-        <Button color="inherit" component={Link} raised to="/login">
+        <Button
+          color="inherit"
+          color="secondary"
+          component={Link}
+          raised
+          to="/login"
+        >
           Login
         </Button>
-        <Button color="inherit" component={Link} raised to="/signup">
+        <Button
+          color="inherit"
+          color="secondary"
+          component={Link}
+          raised
+          to="/signup"
+        >
           Sign Up
         </Button>
       </Toolbar>
