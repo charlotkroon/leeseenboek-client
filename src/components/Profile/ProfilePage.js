@@ -9,7 +9,11 @@ class ProfilePage extends Component {
     if (!this.props.user) {
       return <div>Please login or sign up first</div>;
     } else {
-      return <div>This is your profile page</div>;
+      return (
+        <div>
+          <h1>Hiiiiii {this.props.user.username}</h1>
+        </div>
+      );
     }
   }
 }
