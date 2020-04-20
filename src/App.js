@@ -23,9 +23,3 @@ function App() {
 }
 
 export default App;
-
-//boek zoeken in api
-//isbn toevoegen bij de user.
-//zoekveld maken --> search for harry potter --> alle boeken --> api clal naar database als je op boek klikt. array met boeken.
-//superagent post --> auth request--> isbn nummer
-//
