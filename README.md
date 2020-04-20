@@ -51,3 +51,4 @@ Important note: to succesfully run this application, you'll need to run the serv
 **Samples of pull requests🔎**
 -   [Theming and Styling with Material UI](https://github.com/charliegabriella/leeseenboek-client/pull/18)
  
+***Enjoy! If there are any questions about this project, don't hesitate to e-mail me at charlotroucha@protonmail.com***
