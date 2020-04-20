@@ -10,17 +10,15 @@ import { Provider } from "react-redux";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#f8bbd0"
+      main: "#f8bbd0",
     },
     secondary: {
       main: "#616161",
       light: "#bdbdbd",
-      dark: "#212121"
-    }
-  }
+      dark: "#212121",
+    },
+  },
 });
-
-console.log("theme??", theme);
 
 ReactDOM.render(
   <BrowserRouter>
