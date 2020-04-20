@@ -1,16 +1,13 @@
 import React from "react";
-
-// Import Book components
 import Book from "../Books/Book";
 
-// Component Shelf
 class Shelf extends React.Component {
   render() {
     return (
-      <div className="bookshelf">
-        <h2 className="bookshelf-title">Currently Reading</h2>
-        <div className="bookshelf-books">
-          <ol className="books-grid">
+      <div>
+        <h2>Currently Reading</h2>
+        <div>
+          <ol>
             {/*List 3 shelves*/}
             <Book />
             <Book />
@@ -22,5 +19,4 @@ class Shelf extends React.Component {
   }
 }
 
-// named export
 export default Shelf;
