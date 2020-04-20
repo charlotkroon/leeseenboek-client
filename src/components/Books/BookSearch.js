@@ -24,7 +24,7 @@ export default class BookSearch extends React.Component {
 
   render() {
     if (!this.state.books) {
-      return "Wait for  book booksearch regel 29";
+      return "Wait for Booksearch on line 27";
     }
 
     if (!this.state.fetching) {

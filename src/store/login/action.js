@@ -10,28 +10,28 @@ const baseUrl = "http://localhost:4000";
 function allUsers(payload) {
   return {
     type: ALL_USERS,
-    payload
+    payload,
   };
 }
 
 function userLogin(payload) {
   return {
     type: USER_LOGIN,
-    payload
+    payload,
   };
 }
 
 function error(payload) {
   return {
     type: ERROR,
-    payload
+    payload,
   };
 }
 
 function userLogout(payload) {
   return {
     type: USER_LOGOUT,
-    payload
+    payload,
   };
 }
 
@@ -41,7 +41,7 @@ export const getUsers = () => (dispatch, getState) => {
   const { users } = state;
   if (!users.length) {
     request(`${baseUrl}/users`)
-      .then(response => {
+      .then((response) => {
         const action = allUsers(response.body);
 
         dispatch(action);
@@ -57,21 +57,21 @@ export const login = (username, password) => (dispatch, getState) => {
     .post(`${baseUrl}/login`)
     .set("Authorization", `Bearer ${state.loggedInUser.jwt}`)
     .send({ username, password })
-    .then(response => {
+    .then((response) => {
       const { jwt, username, id } = response.body;
 
       const action = userLogin({ jwt, username, id });
       dispatch(action);
     })
-    .catch(errorResponse => {
+    .catch((errorResponse) => {
       console.error(errorResponse);
       const action = error("Wrong password or username. Please try again.");
       dispatch(action);
     });
 };
 
-//LOG UIT
-export const logout = () => dispatch => {
+//LOG OUT
+export const logout = () => (dispatch) => {
   const action = userLogout({});
   dispatch(action);
 };
