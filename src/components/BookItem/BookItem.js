@@ -10,27 +10,25 @@ import CardHeader from "@material-ui/core/CardHeader";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345
+    maxWidth: 345,
   },
 
   media: {
-    height: 400
-  }
+    height: 400,
+  },
 });
 
 export function BookItem(props) {
   const classes = useStyles();
   if (!props.book) {
-    return "wacht op book";
+    return "Wait for book";
   }
   if (!props.book.imageLinks) {
-    return "wacht op imagelinks";
+    return "Wait for imagelinks";
   }
   if (!props.book.imageLinks.smallThumbnail) {
-    return "wacht op imagelinks.smallThumbnail";
+    return "Wait for imagelinks.smallThumbnail";
   }
-
-  console.log("wat is imagethumbnail", props.book.imageLinks.smallThumbnail);
 
   return (
     <Card className={classes.root}>
@@ -63,5 +61,3 @@ export function BookItem(props) {
 }
 
 export default BookItem;
-
-// <CardMedia src={this.props.book.imageLinks.smallThumbnail} />
