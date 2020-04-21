@@ -5,6 +5,13 @@ import { userLogin } from "../../store/login/action";
 
 class AddBookFormContainer extends React.Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>Add a Book To Your Shelf</h1>
+        <BookSearchForm />
+      </div>
+    );
   }
 }
+
+export default connect(null, { userLogin })(AddBookFormContainer);
