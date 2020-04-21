@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // import withStyles from "@material-ui/core/styles/withStyles";
 // import Button from "@material-ui/core/Button";
 
-class ProfilePage extends Component {
+class ProfilePage extends React.Component {
   render() {
     if (!this.props.user) {
       return <div>Please login or sign up first</div>;
@@ -18,11 +18,11 @@ class ProfilePage extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return;
-  {
-    loggedInUser: state.loggedInUser;
-  }
-}
+// function mapStateToProps(state) {
+//   return;
+//   {
+//     loggedInUser: state.loggedInUser;
+//   }
+// }
 
-export default connect(mapStateToProps)(ProfilePage);
+export default connect(null)(ProfilePage);
