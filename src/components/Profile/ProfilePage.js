@@ -5,6 +5,15 @@ import { connect } from "react-redux";
 // import Button from "@material-ui/core/Button";
 
 class ProfilePage extends React.Component {
+  componentDidUpdate() {
+    console.log("hello profilepage?");
+    if (this.props.user) {
+      if (this.props.loggedInUser) {
+        return <h1>hi</h1>;
+      }
+    }
+  }
+
   render() {
     if (!this.props.user) {
       return <div>Please login or sign up first</div>;
@@ -18,11 +27,11 @@ class ProfilePage extends React.Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return;
-//   {
-//     loggedInUser: state.loggedInUser;
-//   }
-// }
+function mapStateToProps(state) {
+  return {
+    error: state.error,
+    loggedInUser: state.loggedInUser,
+  };
+}
 
-export default connect(null)(ProfilePage);
+export default connect(mapStateToProps)(ProfilePage);
