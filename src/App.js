@@ -6,7 +6,6 @@ import LoginFormContainer from "./components/Login/LoginFormContainer";
 import Footer from "./components/Layouts/Footer";
 import Homepage from "./components/Home/HomePage";
 import About from "./components/About/About";
-import ProfilePage from "./components/Profile/ProfilePage";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       <Route path="/signup" component={SignupFormContainer} />
       <Route path="/login" component={LoginFormContainer} />
       <Route path="/about" component={About} />
-      <Route path="/profilepage" component={ProfilePage} />
       <Footer />
     </div>
   );
