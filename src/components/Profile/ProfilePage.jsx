@@ -1,29 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import { Link } from "react-router-dom";
+import AddBookFormContainer from "../AddBook/AddBookFormContainer";
 // import PropTypes from "prop-types";
 // import withStyles from "@material-ui/core/styles/withStyles";
 // import Button from "@material-ui/core/Button";
 
 class ProfilePage extends React.Component {
-  componentDidUpdate() {
-    console.log("hello profilepage?");
-    if (this.props.user) {
-      if (this.props.loggedInUser.username) {
-        return <h1>hi</h1>;
-      }
-    }
-  }
-
   render() {
     if (!this.props.user) {
-      return <div>Please login or sign up first</div>;
-    } else {
       return (
         <div>
-          <h1>Hiiiiii {this.props.loggedInUser.username}</h1>
+          <h4>This page is only for useres. Please login or sign up first</h4>
+          <Link to="/login">Login</Link>
+          <br />
+          <Link to="/signup">Sign Up</Link>
         </div>
       );
+    } else {
+      return <div>Hi, {this.props.loggedInUser.username}</div>;
+      // <AddBookFormContainer />)
     }
   }
 }

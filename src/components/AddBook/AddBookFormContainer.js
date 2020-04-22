@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import BookSearchForm from "../Books/BookSearchForm";
-import { userLogin } from "../../store/login/action";
+import { login } from "../../store/login/action";
 
 class AddBookFormContainer extends React.Component {
   render() {
@@ -14,4 +14,6 @@ class AddBookFormContainer extends React.Component {
   }
 }
 
-export default connect(null, { userLogin })(AddBookFormContainer);
+const mapDispatchToProps = { login };
+
+export default connect(null, {})(AddBookFormContainer);
