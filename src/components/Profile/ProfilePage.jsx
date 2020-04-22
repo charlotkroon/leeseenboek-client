@@ -18,8 +18,12 @@ class ProfilePage extends React.Component {
         </div>
       );
     } else {
-      return <div>Hi, {this.props.loggedInUser.username}</div>;
-      // <AddBookFormContainer />)
+      return (
+        <div>
+          <h4>Hi, {this.props.loggedInUser.username}</h4>
+          <AddBookFormContainer />
+        </div>
+      );
     }
   }
 }
