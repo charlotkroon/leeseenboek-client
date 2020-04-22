@@ -9,7 +9,6 @@ export default function Homepage() {
   return (
     <Grid container justify="center">
       <BookSearch />
-      <ProfilePage />
     </Grid>
   );
 }

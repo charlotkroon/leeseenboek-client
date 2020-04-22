@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+
 // import PropTypes from "prop-types";
 // import withStyles from "@material-ui/core/styles/withStyles";
 // import Button from "@material-ui/core/Button";
@@ -8,7 +9,7 @@ class ProfilePage extends React.Component {
   componentDidUpdate() {
     console.log("hello profilepage?");
     if (this.props.user) {
-      if (this.props.loggedInUser) {
+      if (this.props.loggedInUser.username) {
         return <h1>hi</h1>;
       }
     }
@@ -20,7 +21,7 @@ class ProfilePage extends React.Component {
     } else {
       return (
         <div>
-          <h1>Hiiiiii {this.props.user.username}</h1>
+          <h1>Hiiiiii {this.props.loggedInUser.username}</h1>
         </div>
       );
     }

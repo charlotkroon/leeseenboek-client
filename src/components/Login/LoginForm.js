@@ -8,10 +8,10 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 
 const style = {
-  Paper: { padding: 20, marginTop: 10, marginBottom: 10 }
+  Paper: { padding: 20, marginTop: 10, marginBottom: 10 },
 };
 
-const LoginForm = props => {
+const LoginForm = (props) => {
   if (props.loggedInUser.length === 0) {
     return (
       <Grid container justify="center">
@@ -78,7 +78,7 @@ const LoginForm = props => {
 function mapStateToProps(state) {
   return {
     error: state.error,
-    loggedInUser: state.loggedInUser
+    loggedInUser: state.loggedInUser,
   };
 }
 
