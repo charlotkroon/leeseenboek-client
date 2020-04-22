@@ -14,6 +14,4 @@ class AddBookFormContainer extends React.Component {
   }
 }
 
-const mapDispatchToProps = { login };
-
-export default connect(null, {})(AddBookFormContainer);
+export default connect(null, { login })(AddBookFormContainer);

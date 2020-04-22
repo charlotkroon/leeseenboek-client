@@ -30,7 +30,6 @@ class ProfilePage extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    error: state.error,
     loggedInUser: state.loggedInUser,
   };
 }
