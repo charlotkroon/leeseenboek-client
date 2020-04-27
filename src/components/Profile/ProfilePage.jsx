@@ -21,7 +21,10 @@ class ProfilePage extends React.Component {
       return (
         <div>
           <h4>Hi, {this.props.loggedInUser.username}</h4>
-          <AddBookFormContainer />
+          <Link to="/myself">My Shelf</Link>
+          <h4>Currently Reading: </h4>
+          <h4>Want to read: </h4>
+          <h4>Read books: </h4>
         </div>
       );
     }

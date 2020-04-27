@@ -1,7 +1,7 @@
 import React from "react";
 import Book from "../Books/Book";
 
-class Shelf extends React.Component {
+class MyShelf extends React.Component {
   render() {
     return (
       <div>
@@ -18,4 +18,4 @@ class Shelf extends React.Component {
   }
 }
 
-export default Shelf;
+export default MyShelf;
