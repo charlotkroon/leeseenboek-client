@@ -33,7 +33,7 @@ Important note: to succesfully run this application, you'll need to run the serv
 -   As a user who loves reading books I want to be able to sign up and create an account.  ✔️
 -   As a user I want to be able to search and discover new books in a big database.  ✔️
 -   As a user I want to have my own profile page. ✔️
--   As a user I want to have the ability to post the book I am currently reading.
+-   As a user I want to have the ability to post the book I am currently reading. [CURRENTLY IN PROGRESS]
 -   Aas a user I want to be able to add friends. 
 -   As a user I want to have discussions about a specific book and give reviews.
 -   As a user I want to find book quotes of a specific book.
