@@ -8,10 +8,10 @@ import AddBookFormContainer from "../AddBook/AddBookFormContainer";
 
 class ProfilePage extends React.Component {
   render() {
-    if (!this.props.user) {
+    if (this.props.loggedInUser.length === 0) {
       return (
         <div>
-          <h4>This page is only for useres. Please login or sign up first</h4>
+          <h4>This page is only for users. Please login or sign up first</h4>
           <Link to="/login">Login</Link>
           <br />
           <Link to="/signup">Sign Up</Link>
@@ -21,7 +21,10 @@ class ProfilePage extends React.Component {
       return (
         <div>
           <h4>Hi, {this.props.loggedInUser.username}</h4>
-          <AddBookFormContainer />
+          <Link to="/myself">My Shelf</Link>
+          <h4>Currently Reading: </h4>
+          <h4>Want to read: </h4>
+          <h4>Read books: </h4>
         </div>
       );
     }
