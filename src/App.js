@@ -7,7 +7,7 @@ import Footer from "./components/Layouts/Footer";
 import Homepage from "./components/Home/HomePage";
 import About from "./components/About/About";
 import ProfilePage from "./components/Profile/ProfilePage";
-import MyShelf from "./components/Shelf/MyShelf";
+import Shelf from "./components/Shelf/Shelf";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Route path="/login" component={LoginFormContainer} />
       <Route path="/about" component={About} />
       <Route path="/profilepage" component={ProfilePage} />
-      <Route path="/myshelf" component={MyShelf} />
+      <Route path="/shelf" component={Shelf} />
       <Footer />
     </div>
   );
